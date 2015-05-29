@@ -1,6 +1,6 @@
-var jinglu=require("./jinglu.json");
+var jinglu=require("./jinglu2.json");
 
-var recensions={"K":[],"D":[],"N":[],"C":[],"H":[],"J":[],"U":[]};
+var recensions={"K":[],"D":[],"N":[],"C":[],"H":[],"J":[],"U":[],"Q":[]};
 var linenow;
 var parseRange=function(s,sid,ckid) {
 	if (!s) return [];
@@ -11,7 +11,7 @@ var parseRange=function(s,sid,ckid) {
 
 		var sep=r.indexOf("@");
 		if (sep==-1) {
-			throw "invalid entry "+sid+" line"+linenow;
+			throw "invalid entry "+sid+" line"+linenow+" data"+r;
 		}
 		var vol=r.substr(0,sep);
 		vol="00"+vol;
